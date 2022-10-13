@@ -10,4 +10,7 @@
 
     $Producto= new Array($nombre,$Imagen64);
     insertIntoTable($Producto);
+
+
+    header("../listado/listado.php");
 ?>
