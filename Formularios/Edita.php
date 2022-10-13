@@ -19,7 +19,9 @@ include("../BD/accesoABD.php");
     <title>Editar</title>
 </head>
 <body>
+    
     <center>
+    <form action="ProcesaEdita.php" method="post">
     <label>ID : </label>
     <input type="text" value="<?php echo($id) ?>" disabled>
     <br>
@@ -37,11 +39,11 @@ include("../BD/accesoABD.php");
     <input type="file">
     <br>
     <br>
-    <input type="button" value="Guardar" onclick=
-    <php
-    //insertintotable(Array)
-    
-    ?>
+    <input type="button" value="Guardar" onclick =
+      <?php
+        header("ProcesaEdita.php");
+        ?>>
+    </form>
 </center>
 </body>
 </html>
