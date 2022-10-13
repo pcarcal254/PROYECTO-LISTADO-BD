@@ -23,7 +23,7 @@ include("../BD/accesoABD.php");
     <center>
     <form action="ProcesaEdita.php" method="post">
     <label>ID : </label>
-    <input type="text" value="<?php echo($id) ?>" disabled>
+    <input type="text" value="<?php echo($id) ?>" id="id"disabled>
     <br>
     <br>
     <label>Nombre : </label>
