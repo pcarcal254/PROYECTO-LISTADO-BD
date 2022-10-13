@@ -33,10 +33,7 @@ include("../BD/accesoABD.php");
     <label>Foto : </label>
     <br>
     <br>
-    <input type="image" >
-    <br>
-    <br>
-    <input type="file">
+    <input type="file" id="Imagen">
     <br>
     <br>
     <input type="button" value="Guardar" onclick =
