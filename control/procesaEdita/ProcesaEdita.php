@@ -1,5 +1,5 @@
 <?php
-    include("../BD/accesoABD.php");
+    include("../bd/accesoABD.php");
 
 
     $id=$_POST["id"];
@@ -12,7 +12,7 @@
 
     $ProductoEditado= new Array($id,$nombre,$Imagen64);
 
-
+    editElement($ProductoEditado);
 
     header("../listado/listado.php");
 
