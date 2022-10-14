@@ -18,7 +18,7 @@
         header("../../listado.php");
     } else {
         $id=$_GET["id"];
-    echo '<form action="../../control/procesaEdita/ProcesaEdita.php" method="post" enctype="multipart/form-data">';
+    echo '<form action="../../control/procesaEdita/procesaEdita.php" method="post" enctype="multipart/form-data">';
     echo    '<label>ID : </label>';
     echo    '<input type="text" name="id" value="'.$id.'" disabled>';
     echo    '<br>';
