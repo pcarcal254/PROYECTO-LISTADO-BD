@@ -1,5 +1,5 @@
 <?php
-    include("../BD/accesoABD.php");
+    include("../bd/accesoABD.php");
 
     $nombre=$_POST["Nombre"];
     $Imagen=$_POST["Imagen"];
