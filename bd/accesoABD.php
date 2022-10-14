@@ -44,12 +44,8 @@
                              - FALSE SI DA ERROR*/
     function selectById($id) {
         $con = conDB();
-        $registros = $con -> query('SELECT nombre,foto FROM producto WHERE id = '.$id.');');
-        if ($registros >= 0){
-            return true;
-        } else {
-            return false;
-        }
+        $registros = $con -> query("SELECT nombre,foto FROM producto WHERE id = $id");
+        return $registros;
     }
 
     /* @param $arrayEditData -> ARRAY CON LOS DATOS DEL PRODUCTO A EDITAR: id,nombre,foto

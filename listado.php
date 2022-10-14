@@ -1,5 +1,5 @@
 <?php 
-include ($_SERVER['DOCUMENT_ROOT']."/bd/accesoABD.php");
+include ("bd/accesoABD.php");
 ?>
 
 <!DOCTYPE html>
@@ -12,32 +12,33 @@ include ($_SERVER['DOCUMENT_ROOT']."/bd/accesoABD.php");
     <title>Document</title>
 </head>
 <body>
-    <div><h1>Listado</h1><a href="nuevo.php">Nuevo</a>
+    <div><h1>Listado</h1><a href="vista/nuevo/Nuevo.php">Nuevo</a>
 </div>
-
-        <table>
+<div class='div-cen'>
+<table>
             <thead>
                 <tr>
                     <th>Id</th>
                     <th>Nombre</th>
                     <th>Foto</th>
-                    <th><img src="img/editar.png" href="Edita.php"></th>
-                    <th><img src="img/borrar.png" href="Nuevo.php"></th>
                 </tr>
             </thead>
             <tbody id="body">
                 <?php 
                 $registro=selectAll();
-                if($registro==0){
+                if($registro==null){
                     echo "<tr><td colspan=5>No se ha encontrado ningún elemento</td></tr>";
                 }else{
-                    while($registro=$producto->fetch()){
-                        echo "<tr><td>".$registro['id']."</td><td>".$registro['nombre']."</td><td><img src='data:image/png;base64,".$registro['foto']."'></tr>";
+                    while($producto = $registro->fetch()){
+                        echo "<tr><td>".$producto['id']."</td><td>".$producto['nombre']."</td><td><img class='fotoProducto' src='data:image/png;base64,".$producto['foto']."'><td><a href='/EJERCICIOS_PHP/vista/edita/Edita.php?id=".$producto['id']."'><img class='simbolo' src='img/editar.png'></a></td>
+                        <td><a><img class='simbolo' src='img/borrar.png'></a></td></tr>";
                     }
                 }
                 
                 ?>
             </tbody>
         </table>
+</div>
+        
 </body>
 </html>

@@ -1,5 +1,6 @@
-table{
-    margin-left: 650px;
+.div_cen{
+    justify-content: center;
+    display: flex;
 }
 
 
@@ -8,13 +9,26 @@ table thead {
     font-size: 20px;
 }
 
-img{
+th, td {
+    padding: 15px;
+}
+
+td {
+    font-size: 20px;
+}
+
+.simbolo{
     width: 20px;
     height: 20px;
 }
 
+.fotoProducto{
+    width: 100px;
+    height: 100px;
+}
+
 a{
     font-size: 20px;
-    margin-left: 150px;
+    margin-left: 10px;
     margin-bottom: 80px;
 }
