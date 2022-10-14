@@ -25,12 +25,8 @@
     <input type="file" name="Imagen">
     <br>
     <br>
-    <input type="button" value="Guardar" onclick =
-    <?php
-        header("ProcesaNuevo.php");       
-    ?>
-    >
-    
+    <input type="button" value="Guardar" >
+     </form>
 
 </center>
 </body>
