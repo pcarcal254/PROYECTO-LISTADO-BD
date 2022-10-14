@@ -1,6 +1,5 @@
 <?php 
-include ("accesoABD.php");
-
+include ($_SERVER['DOCUMENT_ROOT']."/bd/accesoABD.php");
 ?>
 
 <!DOCTYPE html>
